@@ -13,13 +13,12 @@ Sử dụng `actions/setup-java@v5` với cấu hình:
 - Cache: gradle
 
 ## 3. Kết quả thực nghiệm
-
-| Nội dung | Lần 1 (chưa có cache) | Lần 2 (có cache) |
-|---|---|---|
-| Thời gian chạy Job | ... | ... |
-| Thời gian bước test | ... | ... |
-| Trạng thái cache | Tạo cache | ... |
-
+   Nội dung	Lần 1	Lần 2
+   Thời gian chạy Job	58 giây	34 giây
+   Thời gian bước test	55 giây	30 giây
+   Trạng thái workflow	Success	Success
+   Trạng thái cache	Chạy lần đầu	Đã cấu hình cache Gradle
+    
 ## 4. Kết luận
 
 Đã cấu hình Gradle Dependency Caching trong GitHub Actions. Cache giúp tái sử dụng các thư viện Gradle giữa các lần chạy phù hợp, hạn chế tải lại thư viện từ Internet và có thể giảm thời gian thực thi CI.
